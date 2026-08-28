@@ -10,6 +10,17 @@ on:
         type: string
         default: "nightly"
   workflow_dispatch:
+    inputs:
+      upload-artifact:
+        description: "Upload build artifacts"
+        required: true
+        type: boolean
+        default: true
+      upload-tag:
+        description: "Release tag"
+        required: true
+        type: string
+        default: "nightly"
 
 # NOTE: F-Droid builder script 'flutter/build_fdroid.sh' reads environment
 # variables from this workflow!
